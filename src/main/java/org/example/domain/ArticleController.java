@@ -15,9 +15,11 @@ public class ArticleController {
     public void search() {
         System.out.print("검색 키워드를 입력해주세요 : ");
         String keyword = scan.nextLine();
-
         ArrayList<Article> searchedList = articleRepository.findKeywordArticle(keyword);
-
+        if(searchedList.size()==0){
+            System.out.println("==================");
+            System.out.println("검색 결과가 없습니다.");
+        }
         articleView.printList(searchedList);
     }
 

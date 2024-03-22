@@ -4,9 +4,8 @@ import java.util.ArrayList;
 
 public class ArticleView {
     public void printList(ArrayList<Article> targetList) {
-
-        for (int i = 0; i < targetList.size(); i++) {
             System.out.println("==================");
+        for (int i = 0; i < targetList.size(); i++) {
             Article article = targetList.get(i);
             System.out.println("번호 : " + article.getId());
             System.out.println("제목 : " + article.getTitle());
